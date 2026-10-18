@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InovaSphere - Buat Konten Viral & Monetisasi Channel Anda dalam 30 Hari</title>
+    <!-- Google Fonts Inter -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0b5394;
+            --primary-dark: #083c6b;
+            --secondary: #ff6600;
+            --secondary-hover: #e65c00;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo { font-size: 1.3rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .btn-primary { background: var(--secondary); color: white; padding: 12px 24px; }
+        .btn-primary:hover { background: var(--secondary-hover); transform: translateY(-1px); }
+        .btn-large { display: block; width: 100%; padding: 18px; font-size: 1.2rem; margin: 20px 0; box-shadow: 0 4px 15px rgba(255,102,0,0.3); }
+
+        /* Hero Section */
+        .hero { padding: 80px 0; background: linear-gradient(135deg, #ffffff, #eff6ff); text-align: center; }
+        .hero h1 { font-size: 2.5rem; font-weight: 800; margin: 0 0 20px 0; color: #0f172a; line-height: 1.2; }
+        .hero p { font-size: 1.15rem; color: #475569; max-width: 800px; margin: 0 auto 30px auto; }
+        .timer-box { background: #fee2e2; border: 1px solid #fca5a5; padding: 15px; border-radius: 8px; max-width: 450px; margin: 0 auto 30px auto; font-weight: 600; color: #991b1b; }
+
+        /* Problem Section */
+        .problems { padding: 60px 0; background: #ffffff; }
+        .section-title { text-align: center; font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card-problem { background: #fff5f5; border-left: 4px solid #ef4444; padding: 20px; border-radius: 4px; }
+        .card-problem h3 { margin: 0 0 10px 0; font-size: 1.1rem; color: #991b1b; }
+
+        /* Solution / Modules */
+        .solution { padding: 60px 0; background: var(--light); }
+        .card-module { background: white; border: 1px solid var(--border); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .card-module h3 { color: var(--primary); margin-top: 0; }
+
+        /* Social Proof */
+        .testimonials { padding: 60px 0; background: #ffffff; }
+        .card-testi { background: var(--light); padding: 25px; border-radius: 8px; font-style: italic; position: relative; }
+        .card-testi strong { display: block; margin-top: 15px; font-style: normal; color: var(--primary); }
+
+        /* Guarantee */
+        .guarantee { background: var(--primary); color: white; padding: 50px 20px; text-align: center; }
+        .guarantee-box { max-width: 650px; margin: 0 auto; }
+
+        /* Pricing */
+        .pricing { padding: 80px 0; text-align: center; background: #ffffff; }
+        .price-card { max-width: 450px; margin: 0 auto; border: 2px solid var(--primary); padding: 40px 20px; border-radius: 12px; background: var(--light); box-shadow: 0 10px 25px rgba(11,83,148,0.08); }
+        .old-price { text-decoration: line-through; color: #94a3b8; font-size: 1.2rem; }
+        .new-price { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin: 10px 0; }
+
+        /* FAQ */
+        .faq { padding: 60px 0; background: var(--light); }
+        .faq-item { background: white; padding: 20px; border-radius: 6px; margin-bottom: 15px; border: 1px solid var(--border); text-align: left; }
+        .faq-item h4 { margin: 0 0 10px 0; font-size: 1.1rem; color: var(--primary); }
+        .faq-item p { margin: 0; color: #475569; }
+
+        /* Lead Magnet Modal / Form */
+        .lead-magnet { background: #f0fdf4; border: 2px dashed #22c55e; padding: 30px; border-radius: 8px; max-width: 600px; margin: 40px auto; text-align: center; }
+        .lead-form { display: flex; gap: 10px; margin-top: 20px; justify-content: center; }
+        .lead-input { padding: 12px; border: 1px solid var(--border); border-radius: 6px; width: 65%; font-size: 1rem; }
+
+        /* Footer */
+        footer { background: #0f172a; color: #94a3b8; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; margin: 0 10px; }
+        .footer-links a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .lead-form { flex-direction: column; align-items: center; }
+            .lead-input { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HEADER -->
+    <header>
+        <div class="container header-wrap">
+            <a href="#" class="logo">InovaSphere</a>
+            <a href="#pricing" class="btn btn-primary">Daftar Sekarang</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Buat Konten Viral & Monetisasi Channel Anda dalam 30 Hari</h1>
+            <p>Kursus praktis untuk kreator TikTok & Facebook: teknik hook, editing cepat, strategi monetisasi, dan skrip yang terbukti mendatangkan klik secara instan.</p>
+            
+            <!-- Countdown Timer Urgensi Otomatis -->
+            <div class="timer-box">
+                ⚠️ Penawaran Terbatas! Harga Early Bird Berakhir Dalam: <span id="countdown">05:00</span>
+            </div>
+
+            <a href="#pricing" class="btn btn-primary btn-large">Mulai Sekarang — Dapatkan Bonus</a>
+        </div>
+    </section>
+
+    <!-- 3. MASALAH + AGITASI -->
+    <section class="problems">
+        <div class="container">
+            <div class="section-title">Masih kesulitan: views rendah, engagement turun, atau konten tidak menghasilkan konversi?</div>
+            <div class="grid-3">
+                <div class="card-problem">
+                    <h3>❌ Bingung Bikin Hook</h3>
+                    <p>Tidak tahu cara membuat hook menarik di 3 detik pertama sehingga penonton langsung scroll lewat begitu saja.</p>
+                </div>
+                <div class="card-problem">
+                    <h3>❌ Produksi Terlalu Lama</h3>
+                    <p>Menghabiskan waktu berjam-jam untuk proses produksi video pendek yang sebenarnya bisa diselesaikan dalam hitungan menit.</p>
+                </div>
+                <div class="card-problem">
+                    <h3>❌ Tidak Tahu Strategi Jualan</h3>
+                    <p>Tidak mengerti cara melakukan Call to Action (CTA) untuk mengubah viewers menjadi pembeli tanpa terkesan memaksa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SOLUSI (DESKRIPSI KURSUS) -->
+    <section class="solution">
+        <div class="container">
+            <div class="section-title">Dalam Kursus Ini Anda Akan Belajar:</div>
+            <div class="grid-3">
+                <div class="card-module">
+                    <h3>Modul 1: Sistem Hook Video</h3>
+                    <p>Membongkar struktur rahasia video durasi 15-60 detik penembus algoritma FYP dan Reels.</p>
+                </div>
+                <div class="card-module">
+                    <h3>Modul 2: Editing Cepat HP</h3>
+                    <p>Panduan praktis editing kilat menggunakan template dan preset aset lokal siap pakai.</p>
+                </div>
+                <div class="card-module">
+                    <h3>Modul 3: Strategi Klik Bio</h3>
+                    <p>Teknik penempatan CTA psikologis yang melipatgandakan jumlah klik ke halaman penawaran.</p>
+                </div>
+            </div>
+            
+            <!-- 5. APA YANG ANDA DAPATKAN (BONUS & SUPPORT) -->
+            <div class="lead-magnet" style="border: 1px solid var(--border); background: white; margin-top: 40px;">
+                <h3 style="color: var(--primary); margin-top:0;">🎁 Fasilitas Ekstra Yang Anda Dapatkan:</h3>
+                <p style="text-align: left; max-width: 450px; margin: 0 auto;">
+                    ✅ Langkah-demi-langkah praktis langsung pakai.<br>
+                    ✅ 10 Template Caption + 5 Skrip Live Selling Bahasa Indonesia.<br>
+                    ✅ Akses Grup Komunitas Support & Sesi Q&A Live 2x Sebulan.<br>
+                    ✅ Update Materi Gratis Selamanya saat ada fitur baru rilis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SOCIAL PROOF (TESTIMONI) -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">Hasil Nyata Dari Mereka Yang Sudah Mempraktikkannya:</div>
+            <div class="grid-3">
+                <div class="card-testi">
