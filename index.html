@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InovaSphere - Buat Konten Viral & Monetisasi Channel Anda dalam 30 Hari</title>
-    <!-- Google Fonts Inter -->
+    <title>Sultry Soulmate™ - Lihat Sketsa Fisik Nyata Belahan Jiwa Anda</title>
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
         :root {
-            --primary: #0b5394;
-            --primary-dark: #083c6b;
-            --secondary: #ff6600;
-            --secondary-hover: #e65c00;
+            --primary: #4c1d95; /* Ungu Mistis */
+            --primary-light: #6d28d9;
+            --secondary: #db2777; /* Pink Sensual */
+            --secondary-hover: #be185d;
             --dark: #0f172a;
-            --light: #f8fafc;
-            --border: #e2e8f0;
+            --light: #faf5ff;
+            --border: #e9d5ff;
         }
         * { box-sizing: border-box; scroll-behavior: smooth; }
         body {
@@ -25,176 +24,173 @@
             color: var(--dark);
             line-height: 1.6;
         }
-        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: #ffffff; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
         
         /* Header */
         header {
-            background: #ffffff;
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
-        .header-wrap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        .logo { font-size: 1.3rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        header h1 { margin: 0; font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; }
+        header p { margin: 10px 0 0 0; font-size: 0.95rem; opacity: 0.9; }
+        
+        .main-content { padding: 30px 20px; text-align: center; }
         
         /* Buttons */
         .btn {
-            display: inline-block;
+            display: block;
             font-weight: 700;
             text-align: center;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             transition: all 0.2s ease;
             cursor: pointer;
+            padding: 16px 20px;
+            font-size: 1.1rem;
+            margin: 25px 0;
         }
-        .btn-primary { background: var(--secondary); color: white; padding: 12px 24px; }
-        .btn-primary:hover { background: var(--secondary-hover); transform: translateY(-1px); }
-        .btn-large { display: block; width: 100%; padding: 18px; font-size: 1.2rem; margin: 20px 0; box-shadow: 0 4px 15px rgba(255,102,0,0.3); }
+        .btn-secondary { 
+            background: linear-gradient(to right, var(--secondary), #f43f5e); 
+            color: white; 
+            box-shadow: 0 4px 15px rgba(219, 39, 119, 0.4); 
+        }
+        .btn-secondary:hover { transform: translateY(-1px); }
 
-        /* Hero Section */
-        .hero { padding: 80px 0; background: linear-gradient(135deg, #ffffff, #eff6ff); text-align: center; }
-        .hero h1 { font-size: 2.5rem; font-weight: 800; margin: 0 0 20px 0; color: #0f172a; line-height: 1.2; }
-        .hero p { font-size: 1.15rem; color: #475569; max-width: 800px; margin: 0 auto 30px auto; }
-        .timer-box { background: #fee2e2; border: 1px solid #fca5a5; padding: 15px; border-radius: 8px; max-width: 450px; margin: 0 auto 30px auto; font-weight: 600; color: #991b1b; }
+        .badge {
+            background-color: #fce7f3;
+            color: var(--secondary);
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
 
-        /* Problem Section */
-        .problems { padding: 60px 0; background: #ffffff; }
-        .section-title { text-align: center; font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card-problem { background: #fff5f5; border-left: 4px solid #ef4444; padding: 20px; border-radius: 4px; }
-        .card-problem h3 { margin: 0 0 10px 0; font-size: 1.1rem; color: #991b1b; }
+        .warning-box {
+            background-color: #fff7ed;
+            border: 1px solid #ffedd5;
+            border-left: 4px solid #f97316;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: left;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
 
-        /* Solution / Modules */
-        .solution { padding: 60px 0; background: var(--light); }
-        .card-module { background: white; border: 1px solid var(--border); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .card-module h3 { color: var(--primary); margin-top: 0; }
+        .features-list {
+            text-align: left;
+            margin: 25px 0;
+            padding-left: 20px;
+        }
+        .features-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
 
-        /* Social Proof */
-        .testimonials { padding: 60px 0; background: #ffffff; }
-        .card-testi { background: var(--light); padding: 25px; border-radius: 8px; font-style: italic; position: relative; }
-        .card-testi strong { display: block; margin-top: 15px; font-style: normal; color: var(--primary); }
-
-        /* Guarantee */
-        .guarantee { background: var(--primary); color: white; padding: 50px 20px; text-align: center; }
-        .guarantee-box { max-width: 650px; margin: 0 auto; }
-
-        /* Pricing */
-        .pricing { padding: 80px 0; text-align: center; background: #ffffff; }
-        .price-card { max-width: 450px; margin: 0 auto; border: 2px solid var(--primary); padding: 40px 20px; border-radius: 12px; background: var(--light); box-shadow: 0 10px 25px rgba(11,83,148,0.08); }
-        .old-price { text-decoration: line-through; color: #94a3b8; font-size: 1.2rem; }
-        .new-price { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin: 10px 0; }
+        /* Testimonials */
+        .reviews-title { font-weight: 800; font-size: 1.2rem; margin-top: 40px; color: var(--primary); }
+        .card-testi { background: #fdf4ff; border: 1px solid var(--border); padding: 20px; border-radius: 8px; font-style: italic; text-align: left; margin-bottom: 15px; font-size: 0.9rem; }
+        .card-testi strong { display: block; margin-top: 10px; font-style: normal; color: var(--primary); }
 
         /* FAQ */
-        .faq { padding: 60px 0; background: var(--light); }
-        .faq-item { background: white; padding: 20px; border-radius: 6px; margin-bottom: 15px; border: 1px solid var(--border); text-align: left; }
-        .faq-item h4 { margin: 0 0 10px 0; font-size: 1.1rem; color: var(--primary); }
-        .faq-item p { margin: 0; color: #475569; }
-
-        /* Lead Magnet Modal / Form */
-        .lead-magnet { background: #f0fdf4; border: 2px dashed #22c55e; padding: 30px; border-radius: 8px; max-width: 600px; margin: 40px auto; text-align: center; }
-        .lead-form { display: flex; gap: 10px; margin-top: 20px; justify-content: center; }
-        .lead-input { padding: 12px; border: 1px solid var(--border); border-radius: 6px; width: 65%; font-size: 1rem; }
+        .faq-section { text-align: left; margin-top: 40px; border-top: 1px solid #f3e8ff; padding-top: 30px; }
+        .faq-item { margin-bottom: 20px; }
+        .faq-item h4 { margin: 0 0 5px 0; color: var(--primary); font-size: 1rem; }
+        .faq-item p { margin: 0; color: #4b5563; font-size: 0.9rem; }
 
         /* Footer */
-        footer { background: #0f172a; color: #94a3b8; padding: 40px 0; text-align: center; font-size: 0.9rem; }
-        .footer-links { margin-bottom: 20px; }
-        .footer-links a { color: #cbd5e1; text-decoration: none; margin: 0 10px; }
-        .footer-links a:hover { color: white; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; }
-            .lead-form { flex-direction: column; align-items: center; }
-            .lead-input { width: 100%; }
-        }
+        footer { background: #0f172a; color: #94a3b8; padding: 30px 20px; text-align: center; font-size: 0.8rem; margin-top: 40px; }
+        footer a { color: #cbd5e1; text-decoration: none; margin: 0 5px; }
     </style>
 </head>
 <body>
 
-    <!-- 1. HEADER -->
-    <header>
-        <div class="container header-wrap">
-            <a href="#" class="logo">InovaSphere</a>
-            <a href="#pricing" class="btn btn-primary">Daftar Sekarang</a>
-        </div>
-    </header>
+    <div class="container">
+        
+        <!-- 1. HEADER & HERO -->
+        <header>
+            <h1>Sultry Soulmate Sketch</h1>
+            <p>Ungkap Wujud Fisik Nyata Pasangan Sejati Anda Bersama Mistress Lin</p>
+        </header>
 
-    <!-- 2. HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <h1>Buat Konten Viral & Monetisasi Channel Anda dalam 30 Hari</h1>
-            <p>Kursus praktis untuk kreator TikTok & Facebook: teknik hook, editing cepat, strategi monetisasi, dan skrip yang terbukti mendatangkan klik secara instan.</p>
+        <div class="main-content">
+            <span class="badge">🔮 Akurasi Sketsa Berbasis Astrologi Kelahiran</span>
+            <h2 style="font-size: 1.4rem; font-weight: 800;">Siapa Orang yang Akan Menemani Malam-Malam Penuh Gairah Anda di Masa Depan?</h2>
             
-            <!-- Countdown Timer Urgensi Otomatis -->
-            <div class="timer-box">
-                ⚠️ Penawaran Terbatas! Harga Early Bird Berakhir Dalam: <span id="countdown">05:00</span>
+            <p>Banyak orang terkejut saat melihat hasil goresan tangan **Mistress Wendy Lin**. Berbeda dari ramalan sketsa wajah biasa, beliau akan menggambarkan belahan jiwa Anda secara detail, sensual, dan mendalam—menghidupkan imajinasi liar Anda ke dalam dunia nyata.</p>
+
+            <div class="warning-box">
+                <strong>⚠️ Peringatan Penting:</strong> Hasil gambaran ini sangat intim, detail, dan hidup. Produk ini hanya ditujukan untuk audiens dewasa berusia 18 tahun ke atas.
             </div>
 
-            <a href="#pricing" class="btn btn-primary btn-large">Mulai Sekarang — Dapatkan Bonus</a>
-        </div>
-    </section>
+            <!-- TOMBOL CTA UTAMA - Terhubung Langsung ke Hoplink ClickBank Baru Anda -->
+            <a href="https://clickbank.net" class="btn btn-secondary" target="_blank">
+                Lihat Sketsa Wajah & Kepribadian Sekarang ›
+            </a>
 
-    <!-- 3. MASALAH + AGITASI -->
-    <section class="problems">
-        <div class="container">
-            <div class="section-title">Masih kesulitan: views rendah, engagement turun, atau konten tidak menghasilkan konversi?</div>
-            <div class="grid-3">
-                <div class="card-problem">
-                    <h3>❌ Bingung Bikin Hook</h3>
-                    <p>Tidak tahu cara membuat hook menarik di 3 detik pertama sehingga penonton langsung scroll lewat begitu saja.</p>
-                </div>
-                <div class="card-problem">
-                    <h3>❌ Produksi Terlalu Lama</h3>
-                    <p>Menghabiskan waktu berjam-jam untuk proses produksi video pendek yang sebenarnya bisa diselesaikan dalam hitungan menit.</p>
-                </div>
-                <div class="card-problem">
-                    <h3>❌ Tidak Tahu Strategi Jualan</h3>
-                    <p>Tidak mengerti cara melakukan Call to Action (CTA) untuk mengubah viewers menjadi pembeli tanpa terkesan memaksa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- 2. CARA KERJA & KEUNGGULAN -->
+            <h3 style="text-align: left; color: var(--primary); font-size: 1.1rem; margin-top: 30px;">Mengapa Layanan Ini Sangat Viral di Media Sosial?</h3>
+            <ul class="features-list">
+                <li>🎨 **Dibuat oleh Seniman Psikis Nyata:** Mistress Lin menggunakan peta bintang kelahiran (Natal Chart) Anda untuk membangun koneksi spiritual yang kuat.</li>
+                <li>🔥 **Analisis Kepribadian Sensual Gratis:** Selain sketsa fisik utuh, Anda juga akan menerima bacaan kepribadian super detail mengenai hal-hal yang mereka sukai di balik pintu kamar.</li>
+                <li>⚡ **Proses Kilat 24 Jam:** Seluruh hasil sketsa digital beresolusi tinggi akan dikirimkan langsung secara aman melalui email Anda dalam waktu 24 jam.</li>
+            </ul>
 
-    <!-- 4. SOLUSI (DESKRIPSI KURSUS) -->
-    <section class="solution">
-        <div class="container">
-            <div class="section-title">Dalam Kursus Ini Anda Akan Belajar:</div>
-            <div class="grid-3">
-                <div class="card-module">
-                    <h3>Modul 1: Sistem Hook Video</h3>
-                    <p>Membongkar struktur rahasia video durasi 15-60 detik penembus algoritma FYP dan Reels.</p>
-                </div>
-                <div class="card-module">
-                    <h3>Modul 2: Editing Cepat HP</h3>
-                    <p>Panduan praktis editing kilat menggunakan template dan preset aset lokal siap pakai.</p>
-                </div>
-                <div class="card-module">
-                    <h3>Modul 3: Strategi Klik Bio</h3>
-                    <p>Teknik penempatan CTA psikologis yang melipatgandakan jumlah klik ke halaman penawaran.</p>
-                </div>
-            </div>
+            <!-- 3. SOCIAL PROOF (TESTIMONI DARI UTAS DOKUMEN KLIKBANK) -->
+            <div class="reviews-title">Kisah Sukses Mereka yang Terkejut:</div>
             
-            <!-- 5. APA YANG ANDA DAPATKAN (BONUS & SUPPORT) -->
-            <div class="lead-magnet" style="border: 1px solid var(--border); background: white; margin-top: 40px;">
-                <h3 style="color: var(--primary); margin-top:0;">🎁 Fasilitas Ekstra Yang Anda Dapatkan:</h3>
-                <p style="text-align: left; max-width: 450px; margin: 0 auto;">
-                    ✅ Langkah-demi-langkah praktis langsung pakai.<br>
-                    ✅ 10 Template Caption + 5 Skrip Live Selling Bahasa Indonesia.<br>
-                    ✅ Akses Grup Komunitas Support & Sesi Q&A Live 2x Sebulan.<br>
-                    ✅ Update Materi Gratis Selamanya saat ada fitur baru rilis.
-                </p>
+            <div class="card-testi">
+                "Awalnya saya cuma iseng mencoba bersama teman-teman. Tapi waktu hasilnya keluar, saya gemetar. Sketsa wajah yang digambar mirip sekali dengan mantan saya yang belakangan ini mendadak mengajak mengobrol lagi! Benar-benar di luar akal sehat!"
+                <strong>— Trisha L. (Verified Client)</strong>
             </div>
-        </div>
-    </section>
 
-    <!-- 6. SOCIAL PROOF (TESTIMONI) -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">Hasil Nyata Dari Mereka Yang Sudah Mempraktikkannya:</div>
-            <div class="grid-3">
-                <div class="card-testi">
+            <div class="card-testi">
+                "Hasil gambaran fisiknya sangat detail dan tajam, bahkan sampai lekukan otot lengan atasnya persis seperti pria idaman saya. Yang paling gila adalah bonus bacaan kepribadiannya... sangat intim dan berani!"
+                <strong>— Lindsay P. (Verified Client)</strong>
+            </div>
+
+            <a href="https://clickbank.net" class="btn btn-secondary" target="_blank">
+                Dapatkan Slot Reservasi Sketsa Anda
+            </a>
+
+            <!-- 4. FAQ SINGKAT -->
+            <div class="faq-section">
+                <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 15px;">Pertanyaan Populer:</h3>
+                <div class="faq-item">
+                    <h4>❓ Informasi apa saja yang dibutuhkan?</h4>
+                    <p>Mistress Lin hanya memerlukan nama lengkap, tanggal lahir, dan kota kelahiran Anda untuk menyusun bagan astrologi personal Anda.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>❓ Apakah data dan privasi saya aman?</h4>
+                    <p>100% Terenkripsi dan Aman. Hasil sketsa dikirim langsung secara pribadi ke email Anda tanpa ada orang lain yang tahu.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>❓ Apakah ada jaminan uang kembali?</h4>
+                    <p>Ya. Layanan ini dilindungi oleh garansi kepuasan penuh dari pihak ClickBank selama 365 hari penuh sejak tanggal pemesanan.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 5. FOOTER PATUH ATURAN PENINJAUAN ADS -->
+        <footer>
+            <div class="footer-links">
+                <a href="https://inovasineuw.com" target="_blank">Home</a> | 
+                <a href="https://inovasineuw.com" target="_blank">Privacy Policy</a> | 
+                <a href="https://inovasineuw.com" target="_blank">Contact Us</a>
+            </div>
+            <p style="font-size: 0.75rem; opacity: 0.7; margin-top: 15px;">
+                Disclaimer: Pembayaran diproses dengan aman oleh ClickBank selaku peritel resmi global. Penggunaan nama produk dan visual hanya ditujukan untuk keperluan promosi afiliasi legal.
+            </p>
+            <p style="margin-top: 15px;">&copy; 2026 InovaSphere & Sultry Soulmate. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
